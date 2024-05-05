@@ -20,7 +20,8 @@ public class Main {
 
         // Получение информации о балансе и доступных средствах
         System.out.println(creditCard.getBalanceInfo()); // Баланс: -200.0, Кредитный лимит: 1000.0
-        System.out.println(creditCard.getAvailableFundsInfo()); // Баланс: -200.0, Доступные средства: 800.0
+        System.out.println(creditCard.getAvailableFundsInfo()); // Баланс: -200.0, Доступные средства: 800.
+        System.out.println("Кредитка:");
         System.out.println("\n");
 
 
@@ -31,6 +32,7 @@ public class Main {
         System.out.println("Баланс после пополнения: " + debitCard.getBalance());  // Статус оплаты true, пока сумма покупки не превышает баланса дебетовой карты
         System.out.println("Баланс после оплаты: " + debitCard.getBalance());
         System.out.println("Статус оплаты: " + paymentSuccessDebit);
+        System.out.println("Дебетовая:");
         System.out.println("\n");
 
         CashbackCard cashbackCard = new CashbackCard(0.05); // Устанавливаем процент кешбэка 5%
@@ -47,6 +49,7 @@ public class Main {
         // Получение информации о балансе и доступных средствах
         System.out.println(cashbackCard.getBalanceInfo()); // Баланс: 215.0
         System.out.println(cashbackCard.getAvailableFundsInfo()); // Баланс: 215.0
+        System.out.println("Дебетовая с Кэшбеком:");
         System.out.println("\n");
 
 
@@ -55,7 +58,7 @@ public class Main {
         // Покупка на 500 рублей
         milesCard.pay(500);
 
-        // Покупка на 300 рублей
+        // Покупка на 400 рублей
         milesCard.pay(400);
 
         // Получение накопленных миль
@@ -65,6 +68,7 @@ public class Main {
         // Получение информации о балансе, кредитном лимите и доступных средствах
         System.out.println(milesCard.getBalanceInfo()); // Баланс: -100.0, Кредитный лимит: 1000.0
         System.out.println(milesCard.getAvailableFundsInfo()); // Баланс: -900.0, Доступные средства: 100.0
+        System.out.println("Кредитка с Бонусами:");
     }
 }
 
